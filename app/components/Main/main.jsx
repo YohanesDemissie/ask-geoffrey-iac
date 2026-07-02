@@ -127,7 +127,7 @@ const Main = () => {
                         </div>
                         <div className="result-data">
                             { loading ? 
-                                <div className="loader">
+                                <div className="loader"  role="progressbar">
                                     <hr /> 
                                     <hr />
                                     <hr />
@@ -156,7 +156,7 @@ const Main = () => {
                             <img src={assets.gallery_icon} alt="" />
                             <img src={assets.mic_icon} alt="" />
                             {input ? 
-                                <img onClick={()=>onSent()} src={assets.send_icon} alt="" />
+                                <img onClick={()=>onSent()} src={assets.send_icon} alt="send button" />
                              : null}
                         </div>
                     </div>

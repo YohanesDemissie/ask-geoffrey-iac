@@ -106,7 +106,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { Context } from "./CreateContext";
-import { sendPrompt } from "../api";
+import { sendPrompt } from "../../lib/api";
 
 const ContextProvider = ({ children }) => {
   const [input, setInput] = useState("");
