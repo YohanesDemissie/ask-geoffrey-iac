@@ -151,14 +151,17 @@ const Main = () => {
             {/* END TEEST  */}
              <div className="main-bottom">
                     <div className="search-box">
-                        <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here..." />
-                        <div>
-                            <img src={assets.gallery_icon} alt="" />
-                            <img src={assets.mic_icon} alt="" />
-                            {input ? 
-                                <img onClick={()=>onSent()} src={assets.send_icon} alt="send button" />
-                             : null}
-                        </div>
+                        <form onSubmit={(e)=>{e.preventDefault(); onSent()}} style={{ display: 'flex', alignItems: 'right', justifyContent: 'right' }}>
+
+                            <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here..." />
+                            {/* <div style={{ display: 'flex', alignItems: 'right', justifyContent: 'right' }}> */}
+                                <img src={assets.gallery_icon} alt="" />
+                                <img src={assets.mic_icon} alt="" />
+                                {input ? 
+                                    <button className="submit-prompt" type="submit"><img onClick={()=>onSent()} src={assets.send_icon} alt="send button" /></button>
+                                    : null}
+                            {/* </div> */}
+                        </form>
                     </div>
                     <p className="bottom-info">
                         Gemini may display inacurate info, including about people, so double-check it's responses. Your privacy and Gemini Apps.

@@ -83,7 +83,7 @@
 }
 
 .search-box {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -93,7 +93,7 @@
 }
 
 .search-box img {
-    width: 24px;
+    height: 24px;
     cursor: pointer;
 }
 
@@ -104,12 +104,19 @@
     outline: none;
     padding: 8px;
     font-size: 18px;
+    color: #585858
 }
 
 .search-box div {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+button.submit-prompt {
+    background: none;
+    border: none;
+    height: fit-content;
 }
 
 .main .bottom-info {
